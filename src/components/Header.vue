@@ -14,8 +14,11 @@ export default defineComponent({
 	   <a href = "" class="btn register_and_login_button">仮</a>
 
     </div>
-
   </div>
+
+
+
+ 
 </template>
 
 <style scoped>
@@ -61,9 +64,9 @@ a.register_and_login_button  {
 
 .register_and_login_button:hover, 
 a.register_and_login_button:hover  {
-  color: #375e97;
+  color: #fff;
   border-radius: 0.3rem;
-  background:  #fff;
+  background:  #2d4d7e;
 }
 
 
