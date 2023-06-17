@@ -1,5 +1,5 @@
-<!-- Card: 上の句のカード
-上の句一覧で表示する -->
+<!-- Tanka_Card:短歌カード
+短歌(5,7,5,7,7)のことで作品一覧で表示する。 -->
 
 <script lang="ts">
 import { defineComponent } from "vue";
@@ -18,6 +18,14 @@ export default defineComponent({
       type: String,
       required: true
     },
+    fourth: {
+      type: String,
+      required: true
+    }, 
+    fifth: {
+      type: String,
+      required: true
+    }, 
   },
   setup() {},
 });
@@ -25,7 +33,13 @@ export default defineComponent({
 
 <template>
   <div class="frame">
-    <!-- 左からflexの子要素が配置され、俳句は右から左に書くので以下のように逆になる。 -->
+    <!-- 左からflexの子要素が配置され、俳句（縦書き)は一行ごとに右から左に書くので以下のように逆になる。 -->
+    <div class="line">
+      {{ fifth }} 
+    </div>
+    <div class="line">
+      {{ fourth }} 
+    </div>
     <div class="line">
       {{ third }} 
     </div>
@@ -35,7 +49,6 @@ export default defineComponent({
     <div class="line">
       {{ first }} 
     </div>
-    
   </div>
 </template>
 
@@ -60,7 +73,7 @@ export default defineComponent({
 }
 
 .line {
-  font-size: 25px;
+  font-size: 18px;
   writing-mode: vertical-rl;
   font-family: "UDデジタル教科書体", "游教科書体";
   text-align: left;

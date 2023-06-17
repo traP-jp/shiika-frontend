@@ -24,10 +24,6 @@
         <div class="more_info_button" v-on:click="" >↓さらに表示</div>
       </div>
     </div>
-
-   
-
-    
      
     <div class= "container">
       <!--「作品」の画像を貼るところ-->
@@ -36,7 +32,7 @@
       </div>
      
       <div class="cards">
-        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Tanka_Card first="ちはやぶる" second="神代も聞かず" third="竜田川" fourth="から紅に" fifth="水くくるとは"></Tanka_Card>
         <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
         <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
         <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
@@ -51,9 +47,7 @@
       <div class="parent_of_more_info_button"> <!--クリックされたらさらに俳句を表示する-->
         <div class="more_info_button" v-on:click="" >↓さらに表示</div>
       </div>
-
     </div>
-
 
   </body>
 </template>
@@ -62,25 +56,25 @@
  import { defineComponent } from 'vue'
  import Header from '../components/Header.vue'
  import Card from '../components/Card.vue'
+ import Tanka_Card from '../components/Tanka_Card.vue'
 
  export default defineComponent({
      components: {
       Header,
       Card,
+      Tanka_Card
      },
-
      setup() {
      },
  })
  </script>
  
- <style scoped>
 
+ <style scoped>
 
 .cards {
   display: grid; /* グリッドレイアウト */
   place-content: center;
-/* place-items: center; */
 /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
   grid-auto-rows: 225px;
   grid-template-columns: repeat(auto-fill, 150px);
@@ -88,22 +82,12 @@
   margin-top: 20px;
 }
 
-
-
-/*
-.card:hover {
-  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
-} 
-*/
-
 .container {
-
-height: 70%;
-justify-items: center;
-place-items: center;
-margin: 30px auto;
-max-width: 1024px;
-
+  height: 70%;
+  justify-items: center;
+  place-items: center;
+  margin: 30px auto;
+  max-width: 1024px;
 }
 .parent_of_more_info_button {
   margin-bottom: 30px;
@@ -124,13 +108,11 @@ max-width: 1024px;
 }
 
 .kaminoku_itiran_png img {
-  width: 170px;
+  width: 180px;
 }
 
 .sakuhin_itiran_png img {
   width:170px;
 }
 
-
  </style>
- 

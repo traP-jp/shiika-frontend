@@ -10,14 +10,14 @@ export default defineComponent({
   <div class="HeaderContainer">
     <div class="title">Shiika</div>
 
+    <div class="my_page">
+      <p>マイページ</p>
+    </div>
+
     <div class="parent_of_register_and_login_button">
 	   <a href = "" class="btn register_and_login_button">仮</a>
-
     </div>
   </div>
-
-
-
  
 </template>
 
@@ -34,30 +34,40 @@ export default defineComponent({
 }
 
 .title {
-  color: #375e97;
-  font-size: 40px;
+  color: #707d91;
+  font-size: 35px;
   font-family: Georgia, 'Times New Roman', Times, sans-serif;
-  margin-top: 0px;
+  margin-left: 20px ;
 }
 
 .TestContainer {
   position: absolute;
   right: 10px;
 }
+.my_page {
+  font-family: "Arial";
+  font-size: 20px;
+  margin-left :auto;
+}
+
+.my_page:hover {
+  font-weight: bold;
+  cursor:pointer;
+}
 
 .parent_of_register_and_login_button {
-	
   color: #375e97;
   font-size: 20px;
-  margin-left :auto
+  /* margin-left :auto */
+  float: left;
+  padding: 30px;
 }
 
 .register_and_login_button, 
 a.register_and_login_button  {
-  
   color: #fff;
   padding: 10px 20px;
-  background-color: #375e97;
+  background-color: #3ea8ff;
   border-radius: 0.3rem;
   text-decoration: none;
 }
@@ -68,6 +78,5 @@ a.register_and_login_button:hover  {
   border-radius: 0.3rem;
   background:  #2d4d7e;
 }
-
 
 </style>
