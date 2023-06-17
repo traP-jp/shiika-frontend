@@ -8,29 +8,63 @@ export default defineComponent({
 
 <template>
   <div class="HeaderContainer">
-    <div class="title">Mushikui</div>
+    <div class="title">Shiika</div>
+
+    <div class="parent_of_register_and_login_button">
+	   <a href = "" class="btn register_and_login_button">仮</a>
+
+    </div>
+
   </div>
 </template>
 
 <style scoped>
 .HeaderContainer {
   display: flex;
-  text-align: center;
-  border-bottom: solid 4px rgb(99, 172, 99);
+  text-align: left;
+  border-bottom: solid 2px #375e97;
   height: 60px;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   position: relative;
+  padding: 0px 16px 0;
 }
 
 .title {
-  font-size: 50px;
-  font-family: 'Acme', sans-serif;
-  margin-top: 5px;
+  color: #375e97;
+  font-size: 40px;
+  font-family: Georgia, 'Times New Roman', Times, sans-serif;
+  margin-top: 0px;
 }
 
 .TestContainer {
   position: absolute;
   right: 10px;
 }
+
+.parent_of_register_and_login_button {
+	
+  color: #375e97;
+  font-size: 20px;
+  margin-left :auto
+}
+
+.register_and_login_button, 
+a.register_and_login_button  {
+  
+  color: #fff;
+  padding: 10px 20px;
+  background-color: #375e97;
+  border-radius: 0.3rem;
+  text-decoration: none;
+}
+
+.register_and_login_button:hover, 
+a.register_and_login_button:hover  {
+  color: #375e97;
+  border-radius: 0.3rem;
+  background:  #fff;
+}
+
+
 </style>
