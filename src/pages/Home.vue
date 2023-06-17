@@ -1,34 +1,51 @@
 <template>
   <Header />
   <body>
-    <!--「上の句」の画像を貼るところ-->
-    <div>
-      <img class="fit-picture" alt = "上の句 一覧" src="">
-    </div>
-
     <div class= "container">
+       <!--「上の句」の画像を貼るところ-->
+     <div class="kaminoku_itiran_png">
+      <img class="fit-picture" alt = "上の句 一覧" src="./../assets/kaminoku_ichiran.png">
+     </div>
      
       <div class="cards"> <!-- コンテナ -->
-        <Card first="あいうえお"></Card>
-                  
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
 
+      </div>
+      <div class="parent_of_more_info_button"> <!--クリックされたらさらに俳句を表示する-->
+        <div class="more_info_button" v-on:click="" >↓さらに表示</div>
+      </div>
+    </div>
 
-        <div class="card">B</div> <!-- アイテム -->
-         
-        <div class="card">C</div> <!-- アイテム -->
-        <div class="card">D</div> <!-- アイテム -->
-        <div class="card">E</div> <!-- アイテム -->
-       
-        <div class="card">F</div> <!-- アイテム -->
-       
-        <div class="card">G</div> <!-- アイテム -->
-        <div class="card">G</div> <!-- アイテム -->
-        <div class="card">G</div> <!-- アイテム -->
-        <div class="card">G</div> <!-- アイテム -->
-       
+   
 
-        
-
+    
+     
+    <div class= "container">
+      <!--「作品」の画像を貼るところ-->
+      <div class="sakuhin_itiran_png">
+          <img class="fit-picture" alt = "作品一覧" src="./../assets/sakuhin_ichiran.png">
+      </div>
+     
+      <div class="cards">
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
       </div>
 
       <div class="parent_of_more_info_button"> <!--クリックされたらさらに俳句を表示する-->
@@ -36,12 +53,6 @@
       </div>
 
     </div>
-
-
-    <div>
-
-    </div>
-   
 
 
   </body>
@@ -67,46 +78,36 @@
 
 
 .cards {
-
-
-display: grid; /* グリッドレイアウト */
-justify-items: center;
-
+  display: grid; /* グリッドレイアウト */
+  place-content: center;
+/* place-items: center; */
 /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
-grid-auto-rows: 225px;
-grid-template-columns: repeat(auto-fill, 150px);
-
-gap: 25px;
-margin: 0 auto;
-margin-top: 40px;
+  grid-auto-rows: 225px;
+  grid-template-columns: repeat(auto-fill, 150px);
+  gap: 25px;
+  margin-top: 20px;
 }
-.inner_card {
-  width:100%;
-  height: 100%;
-  background-color: black;
 
-}
-.card {
-  height: 100%;
-  width:100%;
-  background-color: #375e97;
 
-  /* aspect-ratio: 2/3; */
-  /* overflow: auto; */
-}
+
+/*
+.card:hover {
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+} 
+*/
 
 .container {
-/* padding-top: 20px; */
 
 height: 70%;
-
-max-width: 1000px;
+justify-items: center;
 place-items: center;
-margin: 0 auto;
+margin: 30px auto;
+max-width: 1024px;
 
 }
-
-
+.parent_of_more_info_button {
+  margin-bottom: 30px;
+}
 
 .more_info_button {
   margin: 0 auto;
@@ -114,12 +115,22 @@ margin: 0 auto;
   width: 100px;
   text-align: center;
   font-size: 15px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "UDデジタル教科書体", "游教科書体";
   color: #fff;
   padding: 1px 2px;
-  background-color:#375e97;
+  background-color:#A1B1CA;
   border-radius: 0.1rem;
   text-decoration: none;
 }
+
+.kaminoku_itiran_png img {
+  width: 170px;
+}
+
+.sakuhin_itiran_png img {
+  width:170px;
+}
+
+
  </style>
  
