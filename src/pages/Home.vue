@@ -33,10 +33,7 @@
      
       <div class="cards">
         <Tanka_Card first="ちはやぶる" second="神代も聞かず" third="竜田川" fourth="から紅に" fifth="水くくるとは"></Tanka_Card>
-        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
-        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
-        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
-        <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
+        <Tanka_Card first="秋の田の" second="かりほの庵の" third="苫をあらみ" fourth="わが衣手は" fifth="露にぬれつつ"></Tanka_Card>
         <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
         <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
         <Card first="あいうえお" second="かきくけこここ" third="さしすせそ"></Card>
