@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../../todolist-karo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "shiika-frontend",
+		"editor.fontSize": 20
+	}
+}
