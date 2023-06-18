@@ -8,7 +8,6 @@
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "shiika-frontend",
-		"editor.fontSize": 20
+		"liveServer.settings.multiRootWorkspaceName": "shiika-frontend"
 	}
 }

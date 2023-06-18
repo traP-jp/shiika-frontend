@@ -2,6 +2,9 @@
   <Header />
 
   <body>
+    <div class="my_page">
+      <h1>投稿した句</h1>
+    </div>
     <div class="container">
       <!--「上の句」の画像を貼るところ-->
       <div class="kaminoku_itiran_png">
@@ -49,33 +52,31 @@
 
   </body>
 </template>
- 
+
 <script setup lang="ts">
 import Header from '../components/Header.vue'
 import Card from '../components/Card.vue'
 import TankaCard from '../components/TankaCard.vue'
-import { ref, watchEffect } from 'vue';
-
-import apis, { ResponseKaminoku } from '../lib/apis'
-
-const kaminokus = ref<ResponseKaminoku[]>([])
-
-watchEffect(async() => {
-  const res = await apis.getKaminoku()
-  kaminokus.value = res.data
-})
 </script>
- 
+
 
 <style scoped>
-.cards {
+.my_page h1 {
+  font-weight: normal;
+  font-family: "UDデジタル教科書体", "游教科書体";
+  width: 80%;
+  margin: 20px auto;
+  border-bottom: 1px solid rgb(0 0 0 / 12%);
+}
+
+.container .cards {
   display: grid;
   /* グリッドレイアウト */
   place-content: center;
   /* grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); */
-  grid-auto-rows: 180px;
-  grid-template-columns: repeat(auto-fill, 120px);
-  gap: 20px;
+  grid-auto-rows: 225px;
+  grid-template-columns: repeat(auto-fill, 150px);
+  gap: 25px;
   margin-top: 20px;
 }
 
@@ -106,10 +107,10 @@ watchEffect(async() => {
 }
 
 .kaminoku_itiran_png img {
-  width: 180px;
+  width: 170px;
 }
 
 .sakuhin_itiran_png img {
-  width: 170px;
+  width: 160px;
 }
 </style>

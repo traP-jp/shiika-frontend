@@ -2,7 +2,6 @@ import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 
 const Home = () => import('../pages/Home.vue')
 const Login = () => import('../pages/Login.vue')
-const Toukou = () => import('../pages/Toukou.vue')
 
 const routes: RouteRecordRaw[] = [
   {
@@ -13,10 +12,6 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/login',
     component: Login,
-  },
-  {
-    path: '/toukou',
-    component: Toukou,
   },
 ]
 
